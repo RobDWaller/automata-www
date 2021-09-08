@@ -5,7 +5,7 @@ namespace Tests\Functional;
 use PHPUnit\Framework\TestCase;
 use Dotenv\Dotenv;
 
-class APITest extends TestCase
+class ApiTest extends TestCase
 {
     private string $baseUrl;
 
