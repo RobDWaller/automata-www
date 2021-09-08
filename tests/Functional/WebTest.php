@@ -31,4 +31,14 @@ class WebTest extends TestCase
         $this->assertStringContainsString('text/html', $response->getHeaderLine('content-type'));
         $this->assertStringContainsString('Rule: 110', $response->getBody());
     }
+
+    public function testGetRule30(): void
+    {
+        $client = new \GuzzleHttp\Client(['port' => $this->port]);
+        $response = $client->request('GET', $this->baseUrl . '/30');
+
+        $this->assertSame(200, $response->getStatusCode());
+        $this->assertStringContainsString('text/html', $response->getHeaderLine('content-type'));
+        $this->assertStringContainsString('Rule: 30', $response->getBody());
+    }
 }
