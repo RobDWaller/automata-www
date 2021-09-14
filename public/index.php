@@ -7,11 +7,11 @@ use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 use AutomataApp\CellularAutomata;
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$twig = Twig::create(__DIR__ . '/templates', ['cache' => false]);
+$twig = Twig::create(__DIR__ . '/../templates', ['cache' => false]);
 
 $app->get('/{rule}', function (Request $request, Response $response, array $args) {
     $view = Twig::fromRequest($request);
