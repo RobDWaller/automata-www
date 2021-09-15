@@ -1,0 +1,17 @@
+#steps {
+    width: 90px;
+}
+
+div.dead {
+    width: 10px;
+    height: 10px;
+    float: left;
+    background-color: white;
+}
+
+div.alive{
+    width: 10px;
+    height: 10px;
+    float: left;
+    background-color: black;
+}
