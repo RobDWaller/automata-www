@@ -1,6 +1,24 @@
 window.onload = function(){
   function reqListener () {
-    console.log(this.responseText);
+    let cellsCollection = JSON.parse(this.responseText);
+
+    let steps = document.createElement("div");
+    steps.setAttribute("id", "steps");
+    
+    for (let key in cellsCollection) {
+      let step = document.createElement("div");
+      for (let key1 in cellsCollection[key]) {
+        let cellDiv = document.createElement("div");
+        cellDiv.className = "alive";
+        if (cellsCollection[key][key1] == 0) {
+          cellDiv.className = "dead";
+        }
+        step.appendChild(cellDiv);
+      }
+      steps.appendChild(step);
+    }
+    automata = document.getElementById("automata");
+    automata.appendChild(steps);
   }
 
   let rule = document.getElementById("rule").value;
