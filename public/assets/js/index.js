@@ -25,6 +25,6 @@ window.onload = function(){
   
   var oReq = new XMLHttpRequest();
   oReq.addEventListener("load", reqListener);
-  oReq.open("GET", `http://localhost:8080/api/automata?cells=000010000&steps=8&rule=${rule}`);
+  oReq.open("GET", `http://localhost:8080/api/automata?cells=0000000000000000000000000001000000000000000000000000000&steps=54&rule=${rule}`);
   oReq.send();
 }
